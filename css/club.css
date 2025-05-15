@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Calibri', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #ddd;
+    padding: 2em;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    border-radius: 5px 5px 0 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin-left: 1em;
+}
+
+nav a {
+    color: #555;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+}
+
+nav a hover {
+    background-color: #eee;
+}
+
+main {
+    padding: 2em;
+    width: 80%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0 0 5px 5px;
+    margin-bottom: 2em;
+}
+
+h1 {
+    font-weight: normal;
+    color: #007bff;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+article {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1.5em;
+    margin-bottom: 1.5em;
+    text-align: left;
+}
+
+article:last-child {
+    border-bottom: none;
+}
+
+article h2 {
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+.data-publicacio {
+    color: #777;
+    font-size: 0.9em;
+    margin-bottom: 1em;
+}
+
+article img {
+    max-width: 300px; /* Ajusta l'amplada màxima de les imatges */
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 1em;
+}
+
+footer {
+    text-align: center;
+    border-top: 1px solid #ccc;
+    padding: 1em;
+    margin-top: 2em;
+    width: 80%;
+    color: #777;
+    font-size: 0.9em;
+}
