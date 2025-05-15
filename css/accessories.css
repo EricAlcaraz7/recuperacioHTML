@@ -4,55 +4,63 @@ body {
     font-family: 'Calibri', sans-serif;
     background-color: #f0f0f0;
     color: #333;
-    line-height: 1.6;
     display: flex;
     flex-direction: column;
     align-items: center;
+   
 }
 
 header {
     background-color: #ddd;
-    padding: 2em;
+    padding: 0.75em 0.5em;
+    text-align: center;
     border-bottom: 1px solid #ccc;
-    display: flex;
-    justify-content: space-between;
+    width: 95%;
+    box-sizing: border-box;
+    flex-direction: column;
     align-items: center;
-    width: 80%;
-    border-radius: 5px 5px 0 0;
 }
 
 nav ul {
-    display: flex;
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0.5em 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 nav li {
-    margin-left: 1em;
+    margin: 0.25em;
 }
 
-nav a {
-    color: #555;
+nav li a {
+    color: blue;
     text-decoration: none;
-    padding: 0.5em 1em;
+    padding: 0.4em 0.6em;
     border-radius: 4px;
+    white-space: nowrap;
+    font-size: 0.9em;
 }
 
-nav a:hover {
-    background-color: #eee;
+nav li a:hover {
+    background-color: #007bff;
+    color: white;
 }
 
 main {
-    padding: 2em;
-    width: 80%;
+    padding: 1.5em;
+    width: 95%;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 0 0 5px 5px;
     margin-bottom: 2em;
     display: flex;
     flex-direction: column;
-    gap: 2em; /* Espai entre les seccions de fabricants/tipus */
+    align-items: center;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -60,28 +68,35 @@ h1 {
     color: #007bff;
     margin-bottom: 1em;
     text-align: center;
+    font-size: 1.75em;
+    margin-top: 0;
 }
 
 .fabricant {
     background-color: #f9f9f9;
-    padding: 1.5em;
+    padding: 1em;
     border-radius: 5px;
     border: 1px solid #eee;
+    margin-bottom: 1em;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .fabricant h2 {
     color: #333;
     margin-top: 0;
-    margin-bottom: 1em;
+    margin-bottom: 0.75em;
     border-bottom: 2px solid #ddd;
     padding-bottom: 0.5em;
+    font-size: 1.2em;
 }
 
-.llista-productes {
+.llistaProductes {
     display: flex;
     flex-wrap: wrap;
-    gap: 1em;
-    justify-content: flex-start; /* Alinea els productes a l'esquerra per defecte */
+    justify-content: center;
+    margin-right: -0.5em;
+    margin-bottom: -0.5em;
 }
 
 .producte {
@@ -89,11 +104,15 @@ h1 {
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 1em;
-    width: calc(33% - 1em); /* Aproximadament un terç de l'ample amb marge */
+    width: 95%; 
+    margin-right: 0;
+    margin-bottom: 1em;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
 
 .producte img {
@@ -118,14 +137,15 @@ h1 {
 
 .button {
     display: inline-block;
-    padding: 0.8em 1.5em;
+    padding: 1em 2em;
     background-color: #007bff;
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 0.9em;
-    transition: background-color 0.3s ease;
-    margin-top: 0.5em; /* Afegim una mica d'espai sobre el botó */
+    font-size: 1em;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 .button:hover {
@@ -135,9 +155,79 @@ h1 {
 footer {
     text-align: center;
     border-top: 1px solid #ccc;
-    padding: 1em;
+    padding: 1em 0.5em;
     margin-top: 2em;
-    width: 80%;
+    width: 95%;
     color: #777;
-    font-size: 0.9em;
+    font-size: 0.85em;
+    box-sizing: border-box;
+}
+/* Movil */
+@media (max-width: 768px) {
+    .producte {
+        width: 95%; 
+        margin-right: 0; 
+        margin-bottom: 1.5em; 
+    }
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+    header {
+        padding: 1em 1em;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    nav li {
+        margin: 0.3em 0.6em;
+    }
+
+    nav li a {
+        font-size: 1em;
+        padding: 0.6em 1em;
+    }
+
+    .llistaProductes {
+        justify-content: center;
+        flex-direction: row;
+        margin-right: -1em;
+        margin-bottom: -1em;
+    }
+
+    .producte {
+        width: calc(50% - 1em - 1px);
+        margin-right: 1em;
+        margin-bottom: 1em;
+    }
+}
+
+/* Ordinadors */
+@media (min-width: 1025px) {
+    header {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1em 2em;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .llistaProductes {
+        justify-content: flex-start;
+        flex-direction: row;
+        margin-right: -1em;
+        margin-bottom: -1em;
+    }
+
+    .producte {
+        width: calc(33.33% - 1em - 1px);
+        margin-right: 1em;
+        margin-bottom: 1em;
+    }
 }
