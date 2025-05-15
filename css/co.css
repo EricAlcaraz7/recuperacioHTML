@@ -57,7 +57,7 @@ main {
     margin-bottom: 2em;
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
 }
 
 h1 {
@@ -85,8 +85,6 @@ h1 {
 
 .llistaProductes {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
 }
 
 .producte {
@@ -98,8 +96,7 @@ h1 {
     text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center; 
-   
+    align-items: center;
 }
 
 .producte img {
@@ -127,7 +124,7 @@ h1 {
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 0.9em;  
+    font-size: 0.9em;
 }
 
 .button:hover {
@@ -158,20 +155,18 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     width: 100%;
     text-align: center;
-   
 }
 
 .imatgeDescripcio img {
-    max-width: 60%;
+    max-width: 40%;
     height: auto;
     border-radius: 5px;
-    margin-bottom: 0;
+    margin-bottom: 1em;
     border: 1px solid #ddd;
     display: block;
-   
 }
 
 
@@ -181,4 +176,200 @@ footer {
     margin-bottom: 3em;
     width: 100%;
     box-sizing: border-box;
+}
+
+.caracteristiquesTecniques {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.caracteristiquesTecniques h2 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    text-align: left;
+}
+
+.caracteristiquesTecniques ul {
+    list-style: none;
+    padding: 0;
+}
+
+.caracteristiquesTecniques li {
+    padding: 8px 0;
+    border-bottom: 1px dotted #eee;
+    color: #555;
+    text-align: left;
+}
+
+.caracteristiquesTecniques li:last-child {
+    border-bottom: none;
+}
+
+.comentaris {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 2em;
+}
+
+.comentaris h2 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    text-align: left;
+}
+
+.comentari {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.comentari .usuari {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.comentari .textComentari {
+    color: #555;
+    line-height: 1.5;
+    text-align: left;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 1em 0.5em;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+        margin-bottom: 0.5em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 0.5em 0;
+        margin-left: 0;
+    }
+
+    .llistaProductes {
+        justify-content: center;
+    }
+
+    .producte {
+        width: 95%;
+    }
+
+    .producte img {
+        max-width: 90%;
+    }
+
+    .button {
+        width: 95%;
+    }
+
+    .imatgeDescripcio img {
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    header {
+        padding: 2em 1em;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    .llistaProductes {
+        justify-content: center;
+    }
+
+    .producte {
+        width: calc(50% - 1em);
+    }
+
+    .producte img {
+        max-width: 70%;
+    }
+
+    .button {
+        width: 70%;
+    }
+
+    .imatgeDescripcio img {
+        max-width: 60%;
+    }
+}
+
+@media (min-width: 1025px) {
+    header {
+        padding: 2em;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul {
+        justify-content: flex-end;
+        flex-wrap: nowrap;
+    }
+
+    .llistaProductes {
+        justify-content: flex-start;
+    }
+
+    .producte {
+        width: calc(33% - 1em);
+        margin-right: 1.5em;
+    }
+
+    .producte:last-child {
+        margin-right: 0;
+    }
+
+    .producte img {
+        max-width: 50%;
+    }
+
+    .button {
+        width: auto;
+    }
+
+    .imatgeDescripcio img {
+        max-width: 40%;
+    }
 }
